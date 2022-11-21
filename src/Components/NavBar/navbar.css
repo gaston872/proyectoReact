@@ -1,0 +1,27 @@
+.nav{
+    display: flex;
+    background-color: #282c34;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLink a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.logo{
+    width: 64px;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+
+.nav p{
+    margin-right: 30px;
+}
+
+.carrito{
+    margin-right: 30px;
+    filter: invert(100%) sepia(0%) saturate(1643%) hue-rotate(15deg) brightness(116%) contrast(92%);
+}
