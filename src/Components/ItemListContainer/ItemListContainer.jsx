@@ -1,8 +1,8 @@
 import React from 'react'
 
-function ItemListContainer() {
+function ItemListContainer(props) {
     return (
-        <div>Mostrar una prop greeting</div>
+        <h1>{props.greeting}</h1>
     )
 }
 

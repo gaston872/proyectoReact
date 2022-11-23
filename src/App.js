@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/NavBar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
@@ -10,7 +9,7 @@ function App() {
     <Navbar/>
     <div className="App">
       <header className="App-header">
-      <ItemListContainer/>
+      <ItemListContainer greeting="Bienvenidos!"/>
       </header>
     </div>
   </>
