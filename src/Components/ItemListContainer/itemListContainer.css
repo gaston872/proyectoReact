@@ -83,7 +83,7 @@
     opacity: (.5);
 }
 
-.contador {
+/* .contador {
     border: none;
     border-radius: 4px;
     display: flex;
@@ -96,7 +96,7 @@
 
 .contador button{
     border: none;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.753);
     color: lightblue;
     cursor: pointer;
     font: bolder;
@@ -109,4 +109,4 @@
     border: solid 1px rgb(120, 196, 221);
     border-radius: 4px;
     color: rgb(120, 196, 221);
-}
+} */

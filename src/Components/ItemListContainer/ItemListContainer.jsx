@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CartWidget from '../CartWidget/CartWidget';
+import ContadorProductos from '../ContadorProductos/ContadorProductos';
 import "./itemListContainer.css";
 
 function ItemListContainer(props) {
@@ -27,12 +27,8 @@ function ItemListContainer(props) {
                 <h2 className="titulo">Titulo</h2>
                 <hr className="linea" />
                 <p className="info">info</p>
-                <div className="contador">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-                <button className="boton-agregar">Agregar al carrito</button>
+                {/* Contador */}
+                <ContadorProductos stock={3}/>
             </div>
         </>
     )
