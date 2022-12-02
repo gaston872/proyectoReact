@@ -23,10 +23,14 @@ function Item(props) {
                 <div className="cardImg">
                 <img src={props.imgurl} alt="imagen producto"></img>
                 </div>
-                <h2 className="titulo">{props.nombre}</h2>
+                
+                <h3 className="titulo">{props.nombre}</h3>
+                <h5 className="precio">$ {props.precio}</h5>
                 <hr className="linea" />
-                <h4>$ {props.precio}</h4>
+                <p>Categoría: {props.categoria}</p>
+                <p>Técnica: {props.tecnica}</p>
                 <p className="info">{props.descripcion}</p>
+                <hr className="linea" />
                 {/* Contador */}
                 <ContadorProductos stock={3}/>
             </div>

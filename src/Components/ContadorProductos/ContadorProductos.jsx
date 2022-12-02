@@ -20,14 +20,14 @@ function ContadorProductos(props) {
     }
 
     return (
-        <>
+        <div className="contenedorContador">
         <div className="contador" >
             <button disabled={count === 1} onClick={handleResta}>-</button>
             <span>{count}</span>
             <button disabled={count === props.stock} onClick={handleSuma}>+</button>
         </div>
         <button onClick={onAddToCart} className="boton-agregar">Agregar al carrito</button>
-        </>
+        </div>
     )
 }
 
