@@ -11,6 +11,7 @@
     transition: all 0.20s ease-in;
     cursor: pointer;
     color: black;
+    text-align: center;
 }
 
 .cardImg{
@@ -87,4 +88,13 @@
 .precio{
     color: rgb(100, 97, 97);
     text-align: center;
+}
+
+.info{
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(100, 97, 97);
 }

@@ -3,3 +3,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.greeting{
+    text-align: center;
+    color: white;
+}

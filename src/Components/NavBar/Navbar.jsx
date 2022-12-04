@@ -1,21 +1,24 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget';
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
-const stylesIcon = {
+/* const stylesIcon = {
     marginLeft: "30px"
-};
+}; */
 
 function Navbar() {
     return (
         <div className="nav">
             <img className="logo" src="/img/logo.png" alt="logo"></img>
             <div className="navLink">
-            <a  href="#">Oleo</a>
-            <a  href="#">lapiz</a>
-            <a  href="#">Acuarela</a>
+                <Link to="/">Inicio</Link>
+                <Link to="/item">Item</Link>
+                <Link to="/categoria/Oleo">Oleo</Link>
+                <Link to="/categoria/Acrílico">Acrílico</Link>
+                <Link to="/categoria/Acuarela">Acuarela</Link>
             </div>
-            <CartWidget/>
+            <CartWidget />
         </div>
     )
 }

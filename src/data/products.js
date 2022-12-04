@@ -4,7 +4,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Abstracto multicolor",
         tecnica: "Acrilico sobre lienzo",
-        categoria: "Abstracto",
+        tipo: "Abstracto",
+        categoria: "Acrílico",
         precio: 15000,
         stock: 3
     },
@@ -14,6 +15,7 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Acuarela botánica",
         tecnica: "Acuarela",
+        tipo: "Acuarela",
         categoria: "Acuarela",
         precio: 8000,
         stock: 18
@@ -23,8 +25,9 @@ const productos = [
         id: 3,
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Díptico abstracto",
-        tecnica: "tecnica:s mixtas",
-        categoria: "Abstracto",
+        tecnica: "tecnicas mixtas",
+        tipo: "Abstracto",
+        categoria: "Oleo",
         precio: 12000,
         stock: 4
     },
@@ -34,7 +37,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Díptico flúo",
         tecnica: "tecnica: pouring",
-        categoria: "Abstracto",
+        tipo: "Abstracto",
+        categoria: "Oleo",
         precio: 13000,
         stock: 5
     },
@@ -44,6 +48,7 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Acuarela floral",
         tecnica: "Acuarela",
+        tipo: "Acuarela",
         categoria: "Acuarela",
         precio: 7000,
         stock: 15
@@ -54,7 +59,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Protea abstracta",
         tecnica: "Acrilico sobre lienzo",
-        categoria: "Oleo",
+        tipo: "Oleo",
+        categoria: "Acrílico",
         precio: 14000,
         stock: 6
     },
@@ -64,6 +70,7 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Acuarela botánica",
         tecnica: "Acuarela",
+        tipo: "Acuarela",
         categoria: "Acuarela",
         precio: 7500,
         stock: 22
@@ -74,7 +81,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Suculenta",
         tecnica: "Oleo sobre papel",
-        categoria: "oleo",
+        tipo: "oleo",
+        categoria: "Oleo",
         precio: 8500,
         stock: 3
     },
@@ -84,7 +92,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Retrato abuela",
         tecnica: "Acrilico sobre lienzo",
-        categoria: "Retrato",
+        tipo: "Retrato",
+        categoria: "Acrílico",
         precio: 10000,
         stock: 2
     },
@@ -94,7 +103,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Retrato Rita",
         tecnica: "Acrilico sobre lienzo",
-        categoria: "Retrato",
+        tipo: "Retrato",
+        categoria: "Acrílico",
         precio: 11000,
         stock: 1
     },
@@ -104,7 +114,8 @@ const productos = [
         imgurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmVc5vdvACYKZnagLaFSFwrMASlPSh153Sg&usqp=CAU",
         nombre: "Autoretrato",
         tecnica: "Acrilico sobre lienzo",
-        categoria: "Retrato",
+        tipo: "Retrato",
+        categoria: "Acrílico",
         precio: 10500,
         stock: "no disponible"
     },
