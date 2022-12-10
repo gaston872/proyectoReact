@@ -11,8 +11,8 @@ function getItems() {
 
 export function getItemsCategoria(categoriaID){
     return new Promise ((resolve, reject) => {
-        let itemsFound = products.filter(item => {
-            return (item.categoria === categoriaID)
+        let itemsFound = products.filter((item) => {
+            return item.categoria === categoriaID;
         });
         if(itemsFound.length > 0)
         resolve(itemsFound);

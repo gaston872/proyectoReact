@@ -11,12 +11,13 @@ function ItemDetailContainer(props) {
     const [product, setProduct] = useState([]);
     /* let id = useParams().id; */
     let {id} = useParams();
+    
 
     useEffect(() => {
         getSingleItem(id)
         .then((respuesta) => setProduct(respuesta)
         .catch(error => alert("Item no encontrado")));
-    }, []
+    }, [id]
     )
 
 

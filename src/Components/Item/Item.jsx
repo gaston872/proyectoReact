@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ContadorProductos from '../ContadorProductos/ContadorProductos';
+/* import ContadorProductos from '../ContadorProductos/ContadorProductos'; */
 /* import products from '../../data/products'; */
 import {Link} from "react-router-dom";
 import "./item.css";
