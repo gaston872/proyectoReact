@@ -10,15 +10,17 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <div className="nav">
-            <img className="logo" src="/img/logo.png" alt="logo"></img>
-            <div className="navLink">
+            
+            {/* <div className="navLink"> */}<img className="logo" src="/img/logo.png" alt="logo"></img>
+                <div className="menu">
                 <Link to="/">Inicio</Link>
                 <Link to="/categoria/Oleo">Oleo</Link>
                 <Link to="/categoria/Acrílico">Acrílico</Link>
                 <Link to="/categoria/Acuarela">Acuarela</Link>
-                {/* <Link to="/item"></Link> */}
-            </div>
-            <CartWidget />
+                </div>
+                {/* <Link to="/item"></Link> */}<CartWidget />
+            {/* </div> */}
+            
         </div>
     )
 }

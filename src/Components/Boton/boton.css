@@ -1,0 +1,9 @@
+.boton{
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(173, 216, 230, 0.192);
+    color: rgba(4, 4, 110, 0.459);
+    cursor: pointer;
+    font: bolder;
+    font-size: large;
+}

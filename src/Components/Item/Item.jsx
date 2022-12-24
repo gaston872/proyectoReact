@@ -33,7 +33,7 @@ function Item(props) {
                 <p className="info">Técnica: {props.tecnica}</p>
                 <hr className="linea" />
                 {/* Contador */}
-                {/* <ContadorProductos stock={3}/> */} 
+                {/* <ContadorProductos stock={3}/>  */}
                 <Link className="link" to={urlDetail}>Seleccionar</Link>  
             </div>
             

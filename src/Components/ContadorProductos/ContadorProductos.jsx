@@ -1,32 +1,34 @@
 import React, { useState } from 'react'
+import Boton from '../Boton/Boton';
 import './contadorProductos.css';
 /* import '../ItemListContainer/itemListContainer.css'; */
 
-function ContadorProductos(props) {
+function ContadorProductos( {stock, onAddToCart}) {
     const [count, setCount] = useState(1);
 
     function handleSuma() {
-        if(count < props.stock)
+        if(count < 3)
         setCount(count + 1);
     }
 
 
     function handleResta() {
+        if (count > 1)
         setCount(count - 1);
     }
 
-    function onAddToCart(){
+    /* function onAddToCart(){
         console.log("agregado al carrito");
-    }
+    } */
 
     return (
         <div className="contenedorContador">
         <div className="contador" >
-            <button disabled={count === 1} onClick={handleResta}>-</button>
+            <Boton disabled={count === 1} onClick={handleResta}>-</Boton>
             <span>{count}</span>
-            <button disabled={count === props.stock} onClick={handleSuma}>+</button>
+            <Boton /* disabled={count === props.stock} */ onClick={handleSuma}>+</Boton>
         </div>
-        <button onClick={onAddToCart} className="boton-agregar">Agregar al carrito</button>
+        <Boton onClick={()=>onAddToCart(count)}> Agregar al carrito </Boton>
         </div>
     )
 }
