@@ -7,7 +7,8 @@ const productos = [
         tipo: "Abstracto",
         categoria: "Acrílico",
         precio: 15000,
-        stock: 3
+        stock: 3,
+        descuento: 25
     },
 
     {
@@ -18,7 +19,8 @@ const productos = [
         tipo: "Acuarela",
         categoria: "Acuarela",
         precio: 8000,
-        stock: 18
+        stock: 18,
+        newProduct: true
     },
 
     {
@@ -73,7 +75,8 @@ const productos = [
         tipo: "Acuarela",
         categoria: "Acuarela",
         precio: 7500,
-        stock: 22
+        stock: 22,
+        descuento: 30
     },
 
     {
@@ -95,7 +98,8 @@ const productos = [
         tipo: "Retrato",
         categoria: "Acrílico",
         precio: 10000,
-        stock: 2
+        stock: 2,
+        newProduct: true
     },
 
     {

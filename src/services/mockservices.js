@@ -5,7 +5,7 @@ function getItems() {
         setTimeout(() => {
            /*  console.log("Llamado a API resuelto"); */
             resolve(products);
-        }, 2000);
+        }, 1000);
     });
 }
 
@@ -30,7 +30,7 @@ export function getSingleItem(id){
             else
                 reject("Item no encontrado")
             /* resolve(products[6]); */
-        }, 2000);
+        }, 1000);
     });
 }
 

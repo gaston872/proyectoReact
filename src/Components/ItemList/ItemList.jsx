@@ -16,6 +16,8 @@ function ItemList(props) {
                         tipo={item.tipo}
                         categoria={item.categoria}
                         descripcion={item.descripcion}
+                        descuento={item.descuento}
+                        newProduct={item.newProduct}
                     />
                     );
                 })}</div>

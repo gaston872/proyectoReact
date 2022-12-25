@@ -35,7 +35,7 @@ function CartContextProvider(props) {
 
             /* const newItem = item;
             newItem.count = count; */
-            newCart.push({ ...item, count });
+            newCart.push({...item, count: count });
 
             /* newCart.push(newItem); */
             /* console.log(newItem); */

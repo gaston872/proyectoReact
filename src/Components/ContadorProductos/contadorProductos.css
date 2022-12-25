@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: space-around;
     margin: auto 300px;
-    margin-bottom: 10px;
+    width: 20%;
+    margin: 10px 40%;
 }
 
 .contador {
