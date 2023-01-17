@@ -9,13 +9,13 @@ function ContadorProductos( { stock, onAddToCart}) {
     const [count, setCount] = useState(1);
 
     function handleSuma() {
-        if(count < 3)
+        if(count < stock)
         setCount(count + 1);
     }
 
 
     function handleResta() {
-        if (count > 1)
+        if (count > stock)
         setCount(count - 1);
     }
 

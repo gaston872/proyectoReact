@@ -26,7 +26,7 @@ function ItemDetail({ product }) {
                     cantidadEnCarrito ?
                         <Link className="link" to="/cart">Ir al carrito</Link>
                         :
-                        <ContadorProductos onAddToCart={handleAddToCart} />
+                        <ContadorProductos onAddToCart={handleAddToCart} stock={product.stock} />
                 }
             </div>
         </>

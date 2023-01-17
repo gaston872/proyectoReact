@@ -6,9 +6,10 @@ import { cartContext } from "../../storage/cartContext"
 import Boton from '../Boton/Boton';
 import CheckOutForm from './CheckOutForm';
 
-function CartContainer() {
+function CartContainer(props) {
     const [order, setOrder] = useState(false);
-    const { cart, removeItem } = useContext(cartContext);
+    const { cart, totalCompra, eliminarProducto, vaciarCarrito } = useContext(cartContext);
+
     function handleCheckOut(datosComprador) {
         const order = { comprador: datosComprador, items: cart, total: /* calcular total desde context */999, date: new Date() }
 
@@ -42,20 +43,20 @@ function CartContainer() {
                             <h4>$ {item.precio}</h4>
                             <p>cantidad: {item.count}</p>
                             <h4>total: ${(item.precio) * (item.count)}</h4>
-                            <button>eliminar</button>
+                            <button onClick={()=>eliminarProducto(item.id)}>eliminar</button>
                         </div>
                     )
                 }
+                <button onClick={()=>vaciarCarrito()}>Vaciar carrito</button>
             </div>
-            <h4>El total de tu compra es de $ --,--</h4>
+            <h4>El total de tu compra es de  ${totalCompra()}</h4>
 
                 <CheckOutForm onCheckOut={handleCheckOut} />
 
             {/* <Boton onClick={handleCheckOut}>Finalizar compra</Boton> */}
         </>
     )
-
-
 }
+
 
 export default CartContainer

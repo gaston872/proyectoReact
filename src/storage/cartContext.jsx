@@ -45,8 +45,25 @@ function CartContextProvider(props) {
         }
         }
 
+        function totalCompra(){
+            
+            return (cart.reduce((acc, elemento)=> acc + elemento.count * elemento.precio, 0))
+            
+        }
+
+        function eliminarProducto(id){
+            const newCart = cart.filter((item) => item.id !== id)
+            setCart(newCart)
+        }
+
+        function vaciarCarrito(){
+            return(
+                setCart([])
+                )
+        }
+
     return (
-        <Provider value={{ cart, addToCart, totalItemsInCart }}>
+        <Provider value={{ cart, addToCart, totalItemsInCart, totalCompra, eliminarProducto, vaciarCarrito }}>
             {props.children}
         </Provider>
     )
