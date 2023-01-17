@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import "../ItemListContainer/itemListContainer.css";
 /* import Item from '../Item/Item'; */
 import { useParams } from 'react-router-dom';
-import { getSingleItem } from '../../services/mockservices';
+import { getSingleItem } from '../../services/firebase';
 import "../Item/item.css"
 
 import ItemDetail from '../ItemDetail/ItemDetail';
@@ -17,28 +17,28 @@ function ItemDetailContainer(props) {
     let { id } = useParams();
 
 
-/*     useEffect(() => {
-        getSingleItem(id)
-            .then((respuesta) => setProduct(respuesta)
-                .catch(error => alert("Item no encontrado")));
-    }, [id]
-    ) */
+    /*     useEffect(() => {
+            getSingleItem(id)
+                .then((respuesta) => setProduct(respuesta)
+                    .catch(error => alert("Item no encontrado")));
+        }, [id]
+        ) */
 
     //OTRA FORMA CON ASYN AWAIT
-    async function getData(){
-     let respuesta = await getSingleItem(id);
-     setProduct(respuesta);
-     setIsLoading(false);
+    async function getData() {
+        let respuesta = await getSingleItem(id);
+        setProduct(respuesta);
+        setIsLoading(false);
     }
-    useEffect(()=> { getData();}, []);
+    useEffect(() => { getData(); }, []);
 
-    return <>    
-    {      
-        isLoading?
-            <Loader/>
-        :
-            <ItemDetail product={product} />
-    };
+    return <>
+        {
+            isLoading ?
+                <Loader />
+                :
+                <ItemDetail product={product} />
+        };
     </>
 }
 

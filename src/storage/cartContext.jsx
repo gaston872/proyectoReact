@@ -13,9 +13,11 @@ const Provider = cartContext.Provider;
     )
 } */
 
+
+
 function CartContextProvider(props) {
     const [cart, setCart] = useState([]);
-
+    
     function totalItemsInCart(){
         let totalItemsInCart = 0;
         cart.forEach(item=> totalItemsInCart += item.count);
@@ -29,7 +31,7 @@ function CartContextProvider(props) {
 
         if (isItemInCart) {
             newCart[indexItemInCart].count += count;
-            setCart(newCart); 
+            setCart(newCart);   
         } else {
             
 
@@ -41,9 +43,7 @@ function CartContextProvider(props) {
             /* console.log(newItem); */
             setCart(newCart);
         }
-
-
-    }
+        }
 
     return (
         <Provider value={{ cart, addToCart, totalItemsInCart }}>

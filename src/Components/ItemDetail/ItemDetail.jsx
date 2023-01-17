@@ -8,7 +8,7 @@ import "./itemDetail.css"
 function ItemDetail({ product }) {
 
     const [cantidadEnCarrito, setCantidadEnCarrito] = useState(0)
-   
+
     const { addToCart, removeItem } = useContext(cartContext);
 
     function handleAddToCart(count) {
@@ -22,8 +22,12 @@ function ItemDetail({ product }) {
                 <h1 className="titulo">{product.nombre}</h1>
                 <img className="cardImg" src={product.imgurl} alt={product.nombre} />
                 <h4 className="precio">$ {product.precio}</h4>
-                <ContadorProductos onAddToCart={handleAddToCart} />
-                <Link className="link" to="/cart">Ir al carrito</Link>
+                {
+                    cantidadEnCarrito ?
+                        <Link className="link" to="/cart">Ir al carrito</Link>
+                        :
+                        <ContadorProductos onAddToCart={handleAddToCart} />
+                }
             </div>
         </>
     )

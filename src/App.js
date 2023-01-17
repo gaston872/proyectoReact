@@ -7,7 +7,8 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 
 import {CartContextProvider} from "./storage/cartContext"
 import CartContainer from './Components/CartContainer/CartContainer';
-
+import { exportItemsToFirestore, getItems } from './services/firebase';
+import Boton from './Components/Boton/Boton';
 
 
 
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <CartContextProvider>
         <BrowserRouter>
+        {/* <button onClick={exportItemsToFirestore}>Export</button> */}
           <Navbar />
           <Routes>
             <Route path="/" element={<ItemListContainer greeting="Bienvenidos!" />} />

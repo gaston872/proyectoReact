@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 /* import products from '../../data/products'; */
 import "./itemListContainer.css";
 /* import Item from '../Item/Item'; */
-import getItems, { getItemsCategoria } from '../../services/mockservices';
+/* import getItems, { getItemsCategoria } from '../../services/mockservices'; */
+import {getItems, getItemsCategoria} from "../../services/firebase";
 import ItemList from '../ItemList/ItemList';
 import {useParams} from 'react-router-dom';
 import Loader from '../Loader/Loader';

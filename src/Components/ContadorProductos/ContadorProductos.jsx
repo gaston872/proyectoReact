@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Boton from '../Boton/Boton';
 import './contadorProductos.css';
+
+import { cartContext } from '../../storage/cartContext';
 /* import '../ItemListContainer/itemListContainer.css'; */
 
-function ContadorProductos( {stock, onAddToCart}) {
+function ContadorProductos( { stock, onAddToCart}) {
     const [count, setCount] = useState(1);
 
     function handleSuma() {
