@@ -5,13 +5,14 @@ import { createBuyOrder, createBuyOrder_WithStockControl } from '../../services/
 import { cartContext } from "../../storage/cartContext"
 import Boton from '../Boton/Boton';
 import CheckOutForm from './CheckOutForm';
+import "./carrito.css"
 
 function CartContainer(props) {
     const [order, setOrder] = useState(false);
     const { cart, totalCompra, eliminarProducto, vaciarCarrito } = useContext(cartContext);
 
     function handleCheckOut(datosComprador) {
-        const order = { comprador: datosComprador, items: cart, total: /* calcular total desde context */999, date: new Date() }
+        const order = { comprador: datosComprador, items: cart, total: totalCompra, date: new Date() }
 
         createBuyOrder_WithStockControl(order).then((id) => {
 
@@ -33,24 +34,31 @@ function CartContainer(props) {
     );
 
     return (
-        <>
-            <div>
-                <h1>Tu carrito</h1>
+        <><h1 className="titulo">Tu carrito</h1>
+            <div className="titulosCarrito">
+                <h3>Nombre</h3>
+                <h3>Precio</h3>
+                <h3>Cantidad</h3>
+                <h3>Total</h3>
+                <h3>Eliminar</h3>
+            </div>  
+                <div>
                 {
                     cart.map(item =>
-                        <div>
+                        <div className="carritoCont">
                             <h3>{item.nombre}</h3>
                             <h4>$ {item.precio}</h4>
                             <p>cantidad: {item.count}</p>
                             <h4>total: ${(item.precio) * (item.count)}</h4>
-                            <button onClick={()=>eliminarProducto(item.id)}>eliminar</button>
+                            <Boton onClick={()=>eliminarProducto(item.id)}>eliminar</Boton>
                         </div>
                     )
-                }
-                <button onClick={()=>vaciarCarrito()}>Vaciar carrito</button>
-            </div>
+                }   
+                </div>
+            <div className="info">
             <h4>El total de tu compra es de  ${totalCompra()}</h4>
-
+            <Boton onClick={()=>vaciarCarrito()}>Vaciar carrito</Boton>
+            </div>    
                 <CheckOutForm onCheckOut={handleCheckOut} />
 
             {/* <Boton onClick={handleCheckOut}>Finalizar compra</Boton> */}

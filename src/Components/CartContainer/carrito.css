@@ -1,0 +1,33 @@
+.carritoCont{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titulosCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 50px;
+    background-color: whitesmoke;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+}
+
+.info{
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 0 20em;
+    padding-bottom: 8px;
+}
